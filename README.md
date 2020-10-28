@@ -1,6 +1,6 @@
 # serviceDB
 
-## Prerequisites
+## Local setup
 
 ```bash
 docker network create -d bridge net
