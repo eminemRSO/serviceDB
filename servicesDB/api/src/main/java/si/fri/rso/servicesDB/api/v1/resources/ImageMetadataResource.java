@@ -17,6 +17,7 @@ import javax.ws.rs.core.UriInfo;
 import java.util.List;
 import java.util.logging.Logger;
 
+import org.json.JSONObject;
 import si.fri.rso.servicesDB.lib.ImageMetadata;
 import si.fri.rso.servicesDB.services.beans.ImageMetadataBean;
 
@@ -98,3 +99,5 @@ public class ImageMetadataResource {
         }
     }
 }
+
+

@@ -4,7 +4,7 @@ kumuluzee:
     name: dev
   version: 1.0.0
   server:
-    base-url: http://localhost:8080
+    base-url: http://0.0.0.0:8080
     http:
       port: 8080
   datasources:
@@ -12,4 +12,13 @@ kumuluzee:
       connection-url: jdbc:postgresql://pg-image-metadata:5432/image-metadata
       username: dbuser
       password: postgres
-      max-pool-size: 20
+  metrics:
+    web-instrumentation:
+      - name: images-endpoint
+        url-pattern: /v1/images/*
+    web-info:
+      - name: info
+        url-pattern: /v1/info/*
+rest-properties:
+  maintenance-mode: false
+  broken: false
