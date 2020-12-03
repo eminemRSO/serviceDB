@@ -1,17 +1,18 @@
+os: linux
 sudo: required
 services:
 - docker
 language: java
-dist: bionic
+dist: trusty
 jdk:
-- openjdk14
+- openjdk15
 cache:
   directories:
   - "$HOME/.m2"
 
 env:
   global:
-    - DOCKER_IMAGE=mista123/test:1.0.0$TRAVIS_JOB_NUMBER
+    - DOCKER_IMAGE=mista123/servicesDB:1.0.0$TRAVIS_JOB_NUMBER
 
 script:
   - mvn clean package -U
