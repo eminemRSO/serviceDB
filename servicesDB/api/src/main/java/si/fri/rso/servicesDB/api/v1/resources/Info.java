@@ -33,6 +33,7 @@ public class Info {
         JSONObject json = new JSONObject();
         json.put("clani", new String[]{"ms8816", "mb6169"});
         json.put("opis_projekta", new String("Preprosti fiver, kjer uporabniki naročajo oziroma prodajajo projekte v obliki slik, videjev in teksta."));
+        json.put("mikrostoritve", new String[]{"https://0.0.0.0:8080/v1/images"});
         json.put("github", new String[]{"https://github.com/eminemRSO/serviceDB"});
         json.put("travis", new String[]{"https://github.com/eminemRSO/serviceDB"});
         json.put("dockerhub", new String[]{"https://github.com/eminemRSO/serviceDB"});
