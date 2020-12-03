@@ -15,11 +15,8 @@ env:
     - DOCKER_IMAGE=mista123/servicesdb:1.0.0$TRAVIS_JOB_NUMBER
 
 script:
-  - cd servicesDB
-  - mvn clean package -U
-  - cd ..
   - docker build -t "$DOCKER_IMAGE" .
 
 after_success:
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -username "$DOCKER_USERNAME" --password-stdin
   - docker push "$DOCKER_IMAGE"

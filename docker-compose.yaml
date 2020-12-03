@@ -3,7 +3,7 @@ services:
    
   services:
     container_name: serviceDB
-    image: mista123/servicesdb
+    image: mista123/servicesdb:1.0.0
     networks:
       - net
     depends_on:
