@@ -12,7 +12,7 @@ cache:
 
 env:
   global:
-    - DOCKER_IMAGE=mista123/servicesDB:1.0.0$TRAVIS_JOB_NUMBER
+    - DOCKER_IMAGE=mista123/servicesdb:1.0.0$TRAVIS_JOB_NUMBER
 
 script:
   - mvn clean package -U
