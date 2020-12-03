@@ -37,6 +37,6 @@ public class Info {
         json.put("github", new String[]{"https://github.com/eminemRSO/serviceDB"});
         json.put("travis", new String[]{"https://travis-ci.com/github/eminemRSO/serviceDB"});
         json.put("dockerhub", new String[]{"https://hub.docker.com/repository/docker/mista123/servicesdb"});
-        return Response.ok(json, MediaType.APPLICATION_JSON).build();
+        return Response.status(Response.Status.OK).entity(json.toString()).build();
     }
 }
